@@ -1,6 +1,6 @@
 extension StringExtension on String? {
   bool get isEmpty {
-    return this == null || this.isEmpty;
+    return this == null || this!.isEmpty;
   }
 
   bool get isEmptyOrNull {
@@ -12,10 +12,10 @@ extension StringExtension on String? {
   }
 
   int get length {
-    return this == null ? 0 : this.length;
+    return this == null ? 0 : this!.length;
   }
 
   bool contains(Pattern other, [int startIndex = 0]) {
-    return this == null ? false : this.contains(other, startIndex);
+    return this == null ? false : this!.contains(other, startIndex);
   }
 }
